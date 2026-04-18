@@ -65,7 +65,7 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "https://school-api-demo-final-v1.loca.lt",
+			"value": "https://schoolmgmt-production-cec2.up.railway.app",
 			"type": "string"
 		}
 	]
