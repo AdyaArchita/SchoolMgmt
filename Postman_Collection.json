@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "a1b2c3d4-e5f6-7890-abcd-1234567890ab",
+		"name": "School Management API",
+		"description": "API for managing schools and listing them based on proximity.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add School",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"City International School\",\n    \"address\": \"123 Education Lane, Springfield\",\n    \"latitude\": 39.781721,\n    \"longitude\": -89.650148\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/addSchool",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"addSchool"
+					]
+				},
+				"description": "Adds a new school to the database."
+			},
+			"response": []
+		},
+		{
+			"name": "List Schools",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/listSchools?latitude=39.781721&longitude=-89.650148",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"listSchools"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "39.781721"
+						},
+						{
+							"key": "longitude",
+							"value": "39.781721"
+						}
+					]
+				},
+				"description": "Returns a list of all schools sorted by proximity to the provided latitude and longitude."
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
