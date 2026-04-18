@@ -65,7 +65,7 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "http://localhost:3000",
+			"value": "https://school-api-demo-final-v1.loca.lt",
 			"type": "string"
 		}
 	]
